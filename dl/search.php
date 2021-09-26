@@ -120,7 +120,7 @@ $thumbux = "https://dlhut.000webhostapp.com/img/logo.png";
 <meta name="twitter:description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
 <meta name="twitter:site" content="theofficialvkr">
 <meta name="twitter:creator" content="itsmethevkr">
-<meta name="twitter:image:src" content="<?php echo $thumbux; ?>">
+<meta name="twitter:image:src" content="http://dlhut.ml/stream.php?sdl=<?php echo $thumbux; ?>">
 <meta property="og:title" content="DLHUT :  Search Result For -  <?php echo $search; ?> :  Online All in One Video & Audio Downloader">
 <meta property="og:description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
 <meta property="og:image" content="<?php echo $thumbux; ?>">
