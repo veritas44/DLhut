@@ -6,8 +6,14 @@ $video_id = $video_id[1];
 $lloc = urldecode($video_id);
 $llocf = urlencode($video_id);
 preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|shorts|user)\/))([^\?&\"'>]+)/", $lloc, $matches);
-$f = $_GET[f];
-$q = $_GET[q];
+$ft = $_GET['f'];
+$qt = $_GET['q'];
+if(!empty($ft)){
+    $f= $ft;
+} else $f = 'mp4';
+if(!empty($qt)){
+    $q= $qt;
+} else $q = '360';
 $urlv = "https://dlhut.000webhostapp.com/api/all.php?sdl=$lloc";
 $ch = curl_init(); 
 curl_setopt($ch, CURLOPT_HEADER, 0); 
