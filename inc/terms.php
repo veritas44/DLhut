@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+       <?php
+    include("../config.php");
+    ?>
     <title>DLhut: Terms</title>
 <meta name="title" content="DLhut: Terms  ">
 <meta name="description" content="DLHUT : Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
@@ -12,44 +15,44 @@
 <meta name="author" content="TheOfficialVKr">
 <meta itemprop="name" content="DLhut: Terms  ">
 <meta itemprop="description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
-<meta itemprop="image" content="/img/logo.png">
+<meta itemprop="image" content="<?php echo $domain; ?>/img/logo.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DLhut: Terms  ">
 <meta name="twitter:description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
 <meta name="twitter:site" content="theofficialvkr">
 <meta name="twitter:creator" content="itsmethevkr">
-<meta name="twitter:image:src" content="https://dlhut.000webhostapp.com/img/logo.png">
+<meta name="twitter:image:src" content="<?php echo $domain; ?>/img/logo.png">
 <meta property="og:title" content="DLhut: Terms  ">
 <meta property="og:description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
-<meta property="og:image" content="https://dlhut.000webhostapp.com/img/logo.png">
-<meta property="og:url" content="https://dlhut.000webhostapp.com/">
+<meta property="og:image" content="<?php echo $domain; ?>/img/logo.png">
+<meta property="og:url" content="<?php echo $domain; ?>/">
 <meta property="og:site_name" content="DLhut: Terms  ">
 <meta property="fb:app_id" content="427710135379286">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo $domain; ?>/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/inc/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $domain; ?>/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $domain; ?>/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $domain; ?>/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $domain; ?>/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $domain; ?>/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $domain; ?>/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $domain; ?>/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $domain; ?>/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $domain; ?>/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $domain; ?>/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $domain; ?>/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php echo $domain; ?>/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $domain; ?>/img/favicon-16x16.png">
+<link rel="manifest" href="<?php echo $domain; ?>/inc/manifest.json">
 <script type='text/javascript'>
 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/service-worker.js') }
 </script><script src='http://dlhut.ml/inc/downloadhelp.php'></script>
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo $domain; ?>/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <style>
     *, *:before, *:after {
@@ -214,11 +217,11 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
 </head> <body>
     <div class="background">
   <div class="container">
-    <div class="screen">   <div class="screen-header">     <div class="screen-header-left"><a href="/"><img width="30px" src="/img/logo.png"></a>       <div class="screen-header-button close"></div>       <div class="screen-header-button maximize"></div>       <div class="screen-header-button minimize"></div>     </div>     <div class="screen-header-right">       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>     </div>   </div>   <div class="screen-body">     <div class="screen-body-item left"  style="background-color:white;"> <center>
+    <div class="screen">   <div class="screen-header">     <div class="screen-header-left"><a href="<?php echo $domain; ?>/"><img width="30px" src="<?php echo $domain; ?>/img/logo.png"></a>       <div class="screen-header-button close"></div>       <div class="screen-header-button maximize"></div>       <div class="screen-header-button minimize"></div>     </div>     <div class="screen-header-right">       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>     </div>   </div>   <div class="screen-body">     <div class="screen-body-item left"  style="background-color:white;"> <center>
 <h1 class="text-center">Terms & Policy</h1> 
 <p><strong>Effective Date: 01-05-2021</strong></p>
 <h3>Your Terms & is important to us</h3>      
-<p>It is our policy to respect your Terms & regarding any information we may collect while operating our website. This Terms & Policy applies to <a href="/"> YavDL</a>&nbsp;. We respect your Terms & and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this Terms & policy ("Terms & Policy") to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Terms & Policy applies only to information we collect through the Website and does not apply to our collection of information from other sources.</p>
+<p>It is our policy to respect your Terms & regarding any information we may collect while operating our website. This Terms & Policy applies to <a href="<?php echo $domain; ?>/"> YavDL</a>&nbsp;. We respect your Terms & and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this Terms & policy ("Terms & Policy") to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Terms & Policy applies only to information we collect through the Website and does not apply to our collection of information from other sources.</p>
 <p>This Terms & Policy, together with the Terms of service posted on our Website, set forth the general rules and policies governing your use of our Website. Depending on your activities when visiting our Website, you may be required to agree to additional terms of service.</p><h2 id="tableofcontents">Contents</h2>
 <p>Click below to jump to any section of this Terms & policy</p>
 <ol type="1">
@@ -237,7 +240,7 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
 <p>A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. get2mates uses cookies to help get2mates identify and track visitors, their usage of https://get2mates.herokuapp.com/ipl, and their website access preferences. get2mates visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using get2mates's websites, with the drawback that certain features of get2mates's websites may not function properly without the aid of cookies.</p>
 <p>By continuing to navigate our website without changing your cookie settings, you hereby acknowledge and agree to get2mates's use of cookies.</p> <p><a href="#tableofcontents">Back to table of contents</a></p><h2 id="Changes">4. Terms & Policy Changes</h2><p>Although most changes are likely to be minor, get2mates may change its Terms & Policy from time to time, and in get2mates's sole discretion. get2mates encourages visitors to frequently check this page for any changes to its Terms & Policy. Your continued use of this site after any change in this Terms & Policy will constitute your acceptance of such change.</p> <p><a href="#tableofcontents">Back to table of contents</a></p><h2 id="Credit">5. Contact Information &amp; Credit</h2><p>Contact me through email - contactvkr@yahoo.com&nbsp;</p><p>Or on social media my username is @theofficialvkr</p> <p><a href="#tableofcontents">Back to table of contents</a></p>  
 <br>
-<a href="/"> Back to Home 🏠 </a>
+<a href="<?php echo $domain; ?>/"> Back to Home 🏠 </a>
     </h3>   
 <br>
 <div id="google_translate_element"></div>

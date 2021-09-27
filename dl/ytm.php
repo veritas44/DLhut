@@ -33,6 +33,7 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
   $lgvkr ="https://$_SERVER[HTTP_HOST]/logo.png"; 
   $year = date("Y"); 
   
+include("../config.php");
   ?>
 
 
@@ -102,23 +103,23 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo $domain; ?>/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/inc/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $domain; ?>/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $domain; ?>/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $domain; ?>/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $domain; ?>/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $domain; ?>/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $domain; ?>/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $domain; ?>/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $domain; ?>/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $domain; ?>/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $domain; ?>/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $domain; ?>/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php echo $domain; ?>/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $domain; ?>/img/favicon-16x16.png">
+<link rel="manifest" href="<?php echo $domain; ?>/inc/manifest.json">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
 <script type='text/javascript'>
@@ -155,11 +156,11 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
  </head>
 <body style="word-break: break-all;" class="bg-light">
    <div class="text-center p-5">
-       		<a href="/">	<img src="/img/logo.png" width="200px" height="90px"></a>
+       		<a href="<?php echo $domain; ?>/">	<img src="<?php echo $domain; ?>/img/logo.png" width="200px" height="90px"></a>
   </div>
  <div class="text-center">
    <h2> Paste a video url or name below and press on "Download". </h2><br><br>
-<form action="/sf.php" method="GET" class="mt-2">
+<form action="<?php echo $domain; ?>/sf.php" method="GET" class="mt-2">
       <input required type="text" placeholder="Video URL or Name" class="mb-3" name="sdl"  value=""><br><br>
       <button class="btn btn-success" type="submit">Download</button>
 </form>
@@ -370,7 +371,7 @@ $surl20 = $jsona1x->result[20]->trackDuration;
 <?php
 if (!empty($sid0)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage0.'"><br><p>'.$salbum0.'</p><p>'.$ssinger0.'</p><p>'.$sartist0.'</p> <p> <h3>'.$stitle0.'</h3> </p> <p> '.convert_seconds($surl0).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid0.'"> Download Now </a>
+<img width="51%" src="'.$simage0.'"><br><p>'.$salbum0.'</p><p>'.$ssinger0.'</p><p>'.$sartist0.'</p> <p> <h3>'.$stitle0.'</h3> </p> <p> '.convert_seconds($surl0).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid0.'"> Download Now </a>
  </div><br>';
 } 
 else 
@@ -386,7 +387,7 @@ Something Went Wrong Please Try After Sometime <meta http-equiv='refresh' conten
 <?php
 if (!empty($sid1)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage1.'"><br><p>'.$salbum1.'</p><p>'.$ssinger1.'</p><p>'.$sartist1.'</p> <p> <h3>'.$stitle1.'</h3> </p> <p> '.convert_seconds($surl1).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid1.'"> Download Now </a>
+<img width="51%" src="'.$simage1.'"><br><p>'.$salbum1.'</p><p>'.$ssinger1.'</p><p>'.$sartist1.'</p> <p> <h3>'.$stitle1.'</h3> </p> <p> '.convert_seconds($surl1).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid1.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -398,7 +399,7 @@ else
 <?php
 if (!empty($sid2)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage2.'"><br><p>'.$salbum2.'</p><p>'.$ssinger2.'</p><p>'.$sartist2.'</p> <p> <h3>'.$stitle2.'</h3> </p> <p> '.convert_seconds($surl2).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid2.'"> Download Now </a>
+<img width="51%" src="'.$simage2.'"><br><p>'.$salbum2.'</p><p>'.$ssinger2.'</p><p>'.$sartist2.'</p> <p> <h3>'.$stitle2.'</h3> </p> <p> '.convert_seconds($surl2).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid2.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -410,7 +411,7 @@ else
 <?php
 if (!empty($sid3)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage3.'"><br><p>'.$salbum3.'</p><p>'.$ssinger3.'</p><p>'.$sartist3.'</p> <p> <h3>'.$stitle3.'</h3> </p> <p> '.convert_seconds($surl3).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid3.'"> Download Now </a>
+<img width="51%" src="'.$simage3.'"><br><p>'.$salbum3.'</p><p>'.$ssinger3.'</p><p>'.$sartist3.'</p> <p> <h3>'.$stitle3.'</h3> </p> <p> '.convert_seconds($surl3).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid3.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -423,7 +424,7 @@ else
 <?php
 if (!empty($sid4)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage4.'"><br><p>'.$salbum4.'</p><p>'.$ssinger4.'</p><p>'.$sartist4.'</p> <p> <h3>'.$stitle4.'</h3> </p> <p> '.convert_seconds($surl4).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid4.'"> Download Now </a>
+<img width="51%" src="'.$simage4.'"><br><p>'.$salbum4.'</p><p>'.$ssinger4.'</p><p>'.$sartist4.'</p> <p> <h3>'.$stitle4.'</h3> </p> <p> '.convert_seconds($surl4).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid4.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -438,7 +439,7 @@ else
 <?php
 if (!empty($sid5)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage5.'"><br><p>'.$salbum5.'</p><p>'.$ssinger5.'</p><p>'.$sartist5.'</p> <p> <h3>'.$stitle5.'</h3> </p> <p> '.convert_seconds($surl5).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid5.'"> Download Now </a>
+<img width="51%" src="'.$simage5.'"><br><p>'.$salbum5.'</p><p>'.$ssinger5.'</p><p>'.$sartist5.'</p> <p> <h3>'.$stitle5.'</h3> </p> <p> '.convert_seconds($surl5).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid5.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -453,7 +454,7 @@ else
 <?php
 if (!empty($sid6)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage6.'"><br><p>'.$salbum6.'</p><p>'.$ssinger6.'</p><p>'.$sartist6.'</p> <p> <h3>'.$stitle6.'</h3> </p> <p> '.convert_seconds($surl6).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid6.'"> Download Now </a>
+<img width="51%" src="'.$simage6.'"><br><p>'.$salbum6.'</p><p>'.$ssinger6.'</p><p>'.$sartist6.'</p> <p> <h3>'.$stitle6.'</h3> </p> <p> '.convert_seconds($surl6).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid6.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -468,7 +469,7 @@ else
 <?php
 if (!empty($sid7)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage7.'"><br><p>'.$salbum7.'</p><p>'.$ssinger7.'</p><p>'.$sartist7.'</p> <p> <h3>'.$stitle7.'</h3> </p> <p> '.convert_seconds($surl7).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid7.'"> Download Now </a>
+<img width="51%" src="'.$simage7.'"><br><p>'.$salbum7.'</p><p>'.$ssinger7.'</p><p>'.$sartist7.'</p> <p> <h3>'.$stitle7.'</h3> </p> <p> '.convert_seconds($surl7).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid7.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -483,7 +484,7 @@ else
 <?php
 if (!empty($sid8)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage8.'"><br><p>'.$salbum8.'</p><p>'.$ssinger8.'</p><p>'.$sartist8.'</p> <p> <h3>'.$stitle8.'</h3> </p> <p> '.convert_seconds($surl8).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid8.'"> Download Now </a>
+<img width="51%" src="'.$simage8.'"><br><p>'.$salbum8.'</p><p>'.$ssinger8.'</p><p>'.$sartist8.'</p> <p> <h3>'.$stitle8.'</h3> </p> <p> '.convert_seconds($surl8).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid8.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -498,7 +499,7 @@ else
 <?php
 if (!empty($sid9)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage9.'"><br><p>'.$salbum9.'</p><p>'.$ssinger9.'</p><p>'.$sartist9.'</p> <p> <h3>'.$stitle9.'</h3> </p> <p> '.convert_seconds($surl9).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid9.'"> Download Now </a>
+<img width="51%" src="'.$simage9.'"><br><p>'.$salbum9.'</p><p>'.$ssinger9.'</p><p>'.$sartist9.'</p> <p> <h3>'.$stitle9.'</h3> </p> <p> '.convert_seconds($surl9).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid9.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -512,7 +513,7 @@ else
 <?php
 if (!empty($sid10)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage10.'"><br><p>'.$salbum10.'</p><p>'.$ssinger10.'</p><p>'.$sartist10.'</p> <p> <h3>'.$stitle10.'</h3> </p> <p> '.convert_seconds($surl10).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid10.'"> Download Now </a>
+<img width="51%" src="'.$simage10.'"><br><p>'.$salbum10.'</p><p>'.$ssinger10.'</p><p>'.$sartist10.'</p> <p> <h3>'.$stitle10.'</h3> </p> <p> '.convert_seconds($surl10).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid10.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -527,7 +528,7 @@ else
 <?php
 if (!empty($sid11)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage11.'"><br><p>'.$salbum11.'</p><p>'.$ssinger11.'</p><p>'.$sartist11.'</p> <p> <h3>'.$stitle11.'</h3> </p> <p> '.convert_seconds($surl11).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid11.'"> Download Now </a>
+<img width="51%" src="'.$simage11.'"><br><p>'.$salbum11.'</p><p>'.$ssinger11.'</p><p>'.$sartist11.'</p> <p> <h3>'.$stitle11.'</h3> </p> <p> '.convert_seconds($surl11).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid11.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -542,7 +543,7 @@ else
 <?php
 if (!empty($sid12)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage12.'"><br><p>'.$salbum12.'</p><p>'.$ssinger12.'</p><p>'.$sartist12.'</p> <p> <h3>'.$stitle12.'</h3> </p> <p> '.convert_seconds($surl12).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid12.'"> Download Now </a>
+<img width="51%" src="'.$simage12.'"><br><p>'.$salbum12.'</p><p>'.$ssinger12.'</p><p>'.$sartist12.'</p> <p> <h3>'.$stitle12.'</h3> </p> <p> '.convert_seconds($surl12).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid12.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -557,7 +558,7 @@ else
 <?php
 if (!empty($sid13)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage13.'"><br><p>'.$salbum13.'</p><p>'.$ssinger13.'</p><p>'.$sartist13.'</p> <p> <h3>'.$stitle13.'</h3> </p> <p> '.convert_seconds($surl13).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid13.'"> Download Now </a>
+<img width="51%" src="'.$simage13.'"><br><p>'.$salbum13.'</p><p>'.$ssinger13.'</p><p>'.$sartist13.'</p> <p> <h3>'.$stitle13.'</h3> </p> <p> '.convert_seconds($surl13).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid13.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -572,7 +573,7 @@ else
 <?php
 if (!empty($sid14)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage14.'"><br><p>'.$salbum14.'</p><p>'.$ssinger14.'</p><p>'.$sartist14.'</p> <p> <h3>'.$stitle14.'</h3> </p> <p> '.convert_seconds($surl14).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid14.'"> Download Now </a>
+<img width="51%" src="'.$simage14.'"><br><p>'.$salbum14.'</p><p>'.$ssinger14.'</p><p>'.$sartist14.'</p> <p> <h3>'.$stitle14.'</h3> </p> <p> '.convert_seconds($surl14).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid14.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -587,7 +588,7 @@ else
 <?php
 if (!empty($sid15)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage15.'"><br><p>'.$salbum15.'</p><p>'.$ssinger15.'</p><p>'.$sartist15.'</p> <p> <h3>'.$stitle15.'</h3> </p> <p> '.convert_seconds($surl15).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid15.'"> Download Now </a>
+<img width="51%" src="'.$simage15.'"><br><p>'.$salbum15.'</p><p>'.$ssinger15.'</p><p>'.$sartist15.'</p> <p> <h3>'.$stitle15.'</h3> </p> <p> '.convert_seconds($surl15).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid15.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -602,7 +603,7 @@ else
 <?php
 if (!empty($sid16)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage16.'"><br><p>'.$salbum16.'</p><p>'.$ssinger16.'</p><p>'.$sartist16.'</p> <p> <h3>'.$stitle16.'</h3> </p> <p> '.convert_seconds($surl16).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid16.'"> Download Now </a>
+<img width="51%" src="'.$simage16.'"><br><p>'.$salbum16.'</p><p>'.$ssinger16.'</p><p>'.$sartist16.'</p> <p> <h3>'.$stitle16.'</h3> </p> <p> '.convert_seconds($surl16).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid16.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -617,7 +618,7 @@ else
 <?php
 if (!empty($sid17)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage17.'"><br><p>'.$salbum17.'</p><p>'.$ssinger17.'</p><p>'.$sartist17.'</p> <p> <h3>'.$stitle17.'</h3> </p> <p> '.convert_seconds($surl17).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid17.'"> Download Now </a>
+<img width="51%" src="'.$simage17.'"><br><p>'.$salbum17.'</p><p>'.$ssinger17.'</p><p>'.$sartist17.'</p> <p> <h3>'.$stitle17.'</h3> </p> <p> '.convert_seconds($surl17).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid17.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -632,7 +633,7 @@ else
 <?php
 if (!empty($sid18)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage18.'"><br><p>'.$salbum18.'</p><p>'.$ssinger18.'</p><p>'.$sartist18.'</p> <p> <h3>'.$stitle18.'</h3> </p> <p> '.convert_seconds($surl18).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid18.'"> Download Now </a>
+<img width="51%" src="'.$simage18.'"><br><p>'.$salbum18.'</p><p>'.$ssinger18.'</p><p>'.$sartist18.'</p> <p> <h3>'.$stitle18.'</h3> </p> <p> '.convert_seconds($surl18).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid18.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -647,7 +648,7 @@ else
 <?php
 if (!empty($sid19)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage19.'"><br><p>'.$salbum19.'</p><p>'.$ssinger19.'</p><p>'.$sartist19.'</p> <p> <h3>'.$stitle19.'</h3> </p> <p> '.convert_seconds($surl19).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid19.'"> Download Now </a>
+<img width="51%" src="'.$simage19.'"><br><p>'.$salbum19.'</p><p>'.$ssinger19.'</p><p>'.$sartist19.'</p> <p> <h3>'.$stitle19.'</h3> </p> <p> '.convert_seconds($surl19).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid19.'"> Download Now </a>
  </div><br>';
 } 
 
@@ -662,7 +663,7 @@ else
 <?php
 if (!empty($sid20)) {
  echo '<div class="w3-container">
-<img width="51%" src="'.$simage20.'"><br><p>'.$salbum20.'</p><p>'.$ssinger20.'</p><p>'.$sartist20.'</p> <p> <h3>'.$stitle20.'</h3> </p> <p> '.convert_seconds($surl20).'</p><br><br><a  class="button button4"  href="/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid20.'"> Download Now </a>
+<img width="51%" src="'.$simage20.'"><br><p>'.$salbum20.'</p><p>'.$ssinger20.'</p><p>'.$sartist20.'</p> <p> <h3>'.$stitle20.'</h3> </p> <p> '.convert_seconds($surl20).'</p><br><br><a  class="button button4"  href="'.$domain.'/dl/ytmdl.php/?sdl=https://youtube.com/watch?v='.$sid20.'"> Download Now </a>
  </div><br>';
 } 
 

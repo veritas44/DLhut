@@ -8,6 +8,7 @@ $video_id = explode("sdl=", $urlx);
 $video_id = $video_id[1];
 $lloc = urldecode($video_id);
 $llocf = urlencode($video_id);
+include("../config.php");
 preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|shorts|user)\/))([^\?&\"'>]+)/", $lloc, $matches);
 $urlv = 'https://dlhut.000webhostapp.com/api/search.php/?sdl='.$llocf;
 $ch = curl_init(); 
@@ -130,23 +131,23 @@ $thumbux = "https://dlhut.000webhostapp.com/img/logo.png";
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo $domain; ?>/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/inc/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $domain; ?>/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $domain; ?>/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $domain; ?>/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $domain; ?>/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $domain; ?>/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $domain; ?>/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $domain; ?>/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $domain; ?>/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $domain; ?>/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $domain; ?>/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $domain; ?>/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php echo $domain; ?>/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $domain; ?>/img/favicon-16x16.png">
+<link rel="manifest" href="<?php echo $domain; ?>/inc/manifest.json">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
 <script type='text/javascript'>
@@ -159,11 +160,11 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
 <style type="text/css">  html, body  {    font-family: "Gotu"  }  input  {    padding: 5px;    border-radius: 10px;    border-style: solid;    border-color: blue;    transition-duration: 0.5s;    width: 80%;  }  input:focus  {    border-color: skyblue;    transition-duration: 0.5s;  }
 </style>
 </head>
-<body style="word-break: break-all;" class="bg-light">  <div class="text-center p-5">    <a href="/">  <img src="/img/logo.png" width="200px" height="90px"></a>  </div> 
+<body style="word-break: break-all;" class="bg-light">  <div class="text-center p-5">    <a href="<?php echo $domain; ?>/">  <img src="<?php echo $domain; ?>/img/logo.png" width="200px" height="90px"></a>  </div> 
 
     <div class="text-center">
    <h2> Paste a video url or name below and press on "Download". </h2><br><br>
-<form action="/sf.php" method="GET" class="mt-2">
+<form action="<?php echo $domain; ?>/sf.php" method="GET" class="mt-2">
       <input required type="text" placeholder="Video URL or Name" class="mb-3" name="sdl"  value=""><br><br>
       <button class="btn btn-success" type="submit">Download</button>
 </form>
@@ -191,162 +192,162 @@ Result For <?php echo $search; ?>
 <br>
 <img src="'.$thumba.'" style="width:100%; height:340px;">    
 <br> '.$titlea.'  <br>
-<a href="/dl/yt.php/?sdl='.$ida.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$ida.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titleb)){    echo '  <br>
 <img src="'.$thumbb.'" style="width:100%; height:340px;">    
 <br>
 '.$titleb.'  <br>
-<a href="/dl/yt.php/?sdl='.$idb.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idb.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titlec)){    echo '  <br>
 <img src="'.$thumbc.'" style="width:100%; height:340px;">    
 <br>
 '.$titlec.'  <br>
-<a href="/dl/yt.php/?sdl='.$idc.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idc.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titled)){    echo '  <br>
 <img src="'.$thumbd.'" style="width:100%; height:340px;">    
 <br>
 '.$titled.'  <br>
-<a href="/dl/yt.php/?sdl='.$idd.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idd.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titlee)){    echo '  <br>
 <img src="'.$thumbe.'" style="width:100%; height:340px;">    
 <br>
 '.$titlee.'  <br>
-<a href="/dl/yt.php/?sdl='.$ide.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$ide.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titlef)){    echo '  <br>
 <img src="'.$thumbf.'" style="width:100%; height:340px;">    
 <br>
 '.$titlef.'  <br>
-<a href="/dl/yt.php/?sdl='.$idf.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idf.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titleg)){    echo '  <br>
 <img src="'.$thumbg.'" style="width:100%; height:340px;">    
 <br>
 '.$titleg.'  <br>
-<a href="/dl/yt.php/?sdl='.$idg.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idg.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titleh)){    echo '  <br>
 <img src="'.$thumbh.'" style="width:100%; height:340px;">    
 <br>
 '.$titleh.'  <br>
-<a href="/dl/yt.php/?sdl='.$idh.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idh.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titlei)){    echo '  <br>
 <img src="'.$thumbi.'" style="width:100%; height:340px;">    
 <br>
 '.$titlei.'  <br>
-<a href="/dl/yt.php/?sdl='.$idi.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idi.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titlej)){    echo '  <br>
 <img src="'.$thumbj.'" style="width:100%; height:340px;">    
 <br>
 '.$titlej.'  <br>
-<a href="/dl/yt.php/?sdl='.$idj.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idj.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titlek)){    echo '  <br>
 <img src="'.$thumbk.'" style="width:100%; height:340px;">    
 <br>
 '.$titlek.'  <br>
-<a href="/dl/yt.php/?sdl='.$idk.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idk.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titlel)){    echo '  <br>
 <img src="'.$thumbl.'" style="width:100%; height:340px;">    
 <br>
 '.$titlel.'  <br>
-<a href="/dl/yt.php/?sdl='.$idl.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idl.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titlem)){    echo '  <br>
 <img src="'.$thumbm.'" style="width:100%; height:340px;">    
 <br>
 '.$titlem.'  <br>
-<a href="/dl/yt.php/?sdl='.$idm.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idm.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titlen)){    echo '  <br>
 <img src="'.$thumbn.'" style="width:100%; height:340px;">    
 <br>
 '.$titlen.'  <br>
-<a href="/dl/yt.php/?sdl='.$idn.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idn.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titleo)){    echo '  <br>
 <img src="'.$thumbo.'" style="width:100%; height:340px;">    
 <br>
 '.$titleo.'  <br>
-<a href="/dl/yt.php/?sdl='.$ido.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$ido.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titlep)){    echo '  <br>
 <img src="'.$thumbp.'" style="width:100%; height:340px;">    
 <br>
 '.$titlep.'  <br>
-<a href="/dl/yt.php/?sdl='.$idp.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idp.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titleq)){    echo '  <br>
 <img src="'.$thumbq.'" style="width:100%; height:340px;">    
 <br>
 '.$titleq.'  <br>
-<a href="/dl/yt.php/?sdl='.$idq.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idq.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titler)){    echo '  <br>
 <img src="'.$thumbr.'" style="width:100%; height:340px;">    
 <br>
 '.$titler.'  <br>
-<a href="/dl/yt.php/?sdl='.$idr.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idr.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titles)){    echo '  <br>
 <img src="'.$thumbs.'" style="width:100%; height:340px;">    
 <br>
 '.$titles.'  <br>
-<a href="/dl/yt.php/?sdl='.$ids.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$ids.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titlet)){    echo '  <br>
 <img src="'.$thumbt.'" style="width:100%; height:340px;">    
 <br>
 '.$titlet.'  <br>
-<a href="/dl/yt.php/?sdl='.$idt.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idt.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  ';
 } else echo '';   if(!empty($titleu)){    echo '  <br>
 <img src="'.$thumbu.'" style="width:100%; height:340px;">    
 <br>
 '.$titleu.'  <br>
-<a href="/dl/yt.php/?sdl='.$idu.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idu.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>    
 ';
 } else echo '';   if(!empty($titlev)){    echo '  <br>
 <img src="'.$thumbv.'" style="width:100%; height:340px;">    
 <br>
 '.$titlev.'  <br>
-<a href="/dl/yt.php/?sdl='.$idv.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idv.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  
 ';
 } else echo '';   if(!empty($titlew)){    echo '  <br>
 <img src="'.$thumbw.'" style="width:100%; height:340px;">    
 <br>
 '.$titlew.'  <br>
-<a href="/dl/yt.php/?sdl='.$idw.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idw.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titlex)){    echo '  <img src="'.$thumbx.'" style="width:100%; height:340px;">    
 <br>
 '.$titlex.'  <br>
-<a href="/dl/yt.php/?sdl='.$idx.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idx.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>  
 ';
 } else echo '';   if(!empty($titley)){    echo '  <br>
 <img src="'.$thumby.'" style="width:100%; height:340px;">    
 <br>
 '.$titley.'  <br>
-<a href="/dl/yt.php/?sdl='.$idy.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idy.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';   if(!empty($titlez)){    echo '
@@ -355,7 +356,7 @@ Result For <?php echo $search; ?>
 <br>
 '.$titlez.'
 <br>
-<a href="/dl/yt.php/?sdl='.$idz.'">
+<a href="'.$domain.'/dl/yt.php/?sdl='.$idz.'">
 <button style="width:100%;"  class="btn btn-success"> Download Now </button></a><br>
 ';
 } else echo '';

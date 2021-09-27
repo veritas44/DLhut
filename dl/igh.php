@@ -9,6 +9,7 @@ $video_id = explode("gh@", $urlx);
 $video_id = $video_id[1];
 $lloc = urldecode($video_id);
 $llocf = urlencode($video_id);
+include("../config.php");
 preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|shorts|user)\/))([^\?&\"'>]+)/", $lloc, $matches);
 $urlv = 'https://dlhut.000webhostapp.com/api/ighdl.php/?sdl='.$lloc;
 $ch = curl_init(); 
@@ -157,23 +158,23 @@ $vpdl = $videoiid;
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo $domain; ?>/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/inc/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $domain; ?>/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $domain; ?>/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $domain; ?>/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $domain; ?>/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $domain; ?>/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $domain; ?>/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $domain; ?>/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $domain; ?>/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $domain; ?>/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $domain; ?>/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $domain; ?>/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php echo $domain; ?>/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $domain; ?>/img/favicon-16x16.png">
+<link rel="manifest" href="<?php echo $domain; ?>/inc/manifest.json">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
 <script type='text/javascript'>
@@ -206,11 +207,11 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
  </head>
 <body style="word-break: break-all;" class="bg-light">
    <div class="text-center p-5">
-       		<a href="/">	<img src="/img/logo.png" width="200px" height="90px"></a>
+       		<a href="<?php echo $domain; ?>/">	<img src="<?php echo $domain; ?>/img/logo.png" width="200px" height="90px"></a>
   </div>
 <div class="text-center">
    <h2> Paste a video url or name below and press on "Download". </h2><br><br>
-<form action="/sf.php" method="GET" class="mt-2">
+<form action="<?php echo $domain; ?>/sf.php" method="GET" class="mt-2">
       <input required type="text" placeholder="Video URL or Name" class="mb-3" name="sdl"  value=""><br><br>
       <button class="btn btn-success" type="submit">Download</button>
 </form>
@@ -241,277 +242,277 @@ Download <?php echo $title; ?>
 
 if(!empty($xlink1)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link1).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink1.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink1.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';    if(!empty($xlink2)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link2).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink2.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink2.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink3)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link3).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink3.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink3.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink4)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link4).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink4.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink4.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink5)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link5).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink5.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink5.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink6)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link6).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink6.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink6.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink7)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link7).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink7.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink7.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink8)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link8).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink8.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink8.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink9)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link9).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink9.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink9.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink10)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link10).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink10.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink10.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink11)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link11).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink11.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink11.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink12)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link12).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink12.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink12.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($xlink13)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($link13).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$xlink13.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$xlink13.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($typea)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typea).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualitya.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualitya.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
  
 if(!empty($typeb)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeb).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityb.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityb.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';
  
 if(!empty($typec)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typec).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityc.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityc.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typed)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typed).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityd.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityd.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typee)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typee).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualitye.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualitye.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typef)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typef).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityf.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityf.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typeg)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeg).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityg.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityg.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typeh)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeh).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityh.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityh.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typei)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typei).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityi.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityi.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typej)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typej).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityj.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityj.'">
 <button style="width:100%;"  class="btn btn-success"> Download </button></a><br>';
 }
 else echo '';   
 if(!empty($typek)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typek).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityk.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityk.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typel)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typel).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityl.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityl.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typem)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typem).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualitym.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualitym.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typen)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typen).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityn.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityn.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typeo)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeo).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityo.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityo.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typep)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typep).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityp.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityp.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typeq)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeq).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityq.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityq.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typer)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typer).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityr.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityr.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($types)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($types).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualitys.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualitys.'">
 <button style="width:100%;"  class="btn btn-success"> Download </button></a><br>';
 }
 else echo '';   
 if(!empty($typet)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typet).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityt.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityt.'">
 <button style="width:100%;"  class="btn btn-success"> Download </button></a><br>';
 }
 else echo '';   
 if(!empty($typeu)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeu).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityu.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityu.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typev)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typev).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityv.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityv.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typew)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typew).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityw.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityw.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';   
 if(!empty($typex)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typex).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityx.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityx.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';  
 if(!empty($typey)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typey).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityy.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityy.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';     
 if(!empty($typez)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typez).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityz.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityz.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';     
 if(!empty($typeza)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeza).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityza.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityza.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';     
 if(!empty($typezb)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typezb).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityzb.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityzb.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';     
 if(!empty($typezc)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typezc).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityzc.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityzc.'">
 <button style="width:100%;"  class="btn btn-success"> Download </button></a><br>';
 }
 else echo '';     
 if(!empty($typezd)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typezd).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityzd.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityzd.'">
 <button style="width:100%;"  class="btn btn-success"> Download </button></a><br>';
 }
 else echo '';     
 if(!empty($typeze)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($typeze).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityze.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityze.'">
 <button style="width:100%;"  class="btn btn-success"> Download </button></a><br>';
 }
 else echo '';     
 if(!empty($typezf)){
     echo '  <br><img src="https://streamytv.herokuapp.com/stream.php?url='.urlencode($zf).'" widt.h="200px" height="200px"></img>
-<a href="/dl/ighdl.php/?sdl='.$qualityzf.'">
+<a href="'.$domain.'/dl/ighdl.php/?sdl='.$qualityzf.'">
 <button style="width:100%;"  class="btn btn-success"> Download  </button></a><br>';
 }
 else echo '';    
 ?>    
-<br><a href="/sf.php/?sdl=igs@<?php echo $lloc; ?>">
+<br><a href="<?php echo $domain; ?>/sf.php/?sdl=igs@<?php echo $lloc; ?>">
 <button style="width:100%;"  class="btn btn-success">  Download Story </button></a><br>
 </h2><!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 <br>

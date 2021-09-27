@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DLhut: Error Please Try Again Or Contact Me</title>
+   <?php
+    include("../config.php");
+    ?>    <title>DLhut: Error Please Try Again Or Contact Me</title>
+
 <meta name="title" content="DLhut: Error Please Try Again Or Contact Me">
 <meta name="description" content="DLHUT : Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
 <meta name="keywords" content="Video,Audio, Downloader, Online, YouTube, Facebook, Twitter, TikTok, MXTakatak, All-in-One,Online Downloader,AIO,">
@@ -12,43 +15,43 @@
 <meta name="author" content="TheOfficialVKr">
 <meta itemprop="name" content="DLhut: Error Please Try Again Or Contact Me">
 <meta itemprop="description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
-<meta itemprop="image" content="/img/logo.png">
+<meta itemprop="image" content="<?php echo $domain; ?>/img/logo.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DLhut: Error Please Try Again Or Contact Me">
 <meta name="twitter:description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
 <meta name="twitter:site" content="theofficialvkr">
 <meta name="twitter:creator" content="itsmethevkr">
-<meta name="twitter:image:src" content="https://dlhut.000webhostapp.com/img/logo.png">
+<meta name="twitter:image:src" content="<?php echo $domain; ?>/img/logo.png">
 <meta property="og:title" content="DLhut: Error Please Try Again Or Contact Me">
 <meta property="og:description" content="Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL,HotStar and 1000+ More Sites too">
-<meta property="og:image" content="https://dlhut.000webhostapp.com/img/logo.png">
-<meta property="og:url" content="https://dlhut.000webhostapp.com/">
+<meta property="og:image" content="<?php echo $domain; ?>/img/logo.png">
+<meta property="og:url" content="<?php echo $domain; ?>/">
 <meta property="og:site_name" content="DLhut: Error Please Try Again Or Contact Me">
 <meta property="fb:app_id" content="427710135379286">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo $domain; ?>/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/inc/manifest.json"><script type='text/javascript'>
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $domain; ?>/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $domain; ?>/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $domain; ?>/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $domain; ?>/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $domain; ?>/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $domain; ?>/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $domain; ?>/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $domain; ?>/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $domain; ?>/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $domain; ?>/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $domain; ?>/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php echo $domain; ?>/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $domain; ?>/img/favicon-16x16.png">
+<link rel="manifest" href="<?php echo $domain; ?>/inc/manifest.json"><script type='text/javascript'>
 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/service-worker.js') }
 </script><script src='http://dlhut.ml/inc/downloadhelp.php'></script>
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo $domain; ?>/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <style>
     *, *:before, *:after {
@@ -214,10 +217,10 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
 <body>
  <div class="background">
   <div class="container">
-    <div class="screen">   <div class="screen-header">     <div class="screen-header-left"><a href="/"><img width="30px" src="/img/logo.png"></a>       <div class="screen-header-button close"></div>       <div class="screen-header-button maximize"></div>       <div class="screen-header-button minimize"></div>     </div>     <div class="screen-header-right">       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>     </div>   </div>   <div class="screen-body">     <div class="screen-body-item left"  style="background-color:white;">  <center>     <h1>
+    <div class="screen">   <div class="screen-header">     <div class="screen-header-left"><a href="<?php echo $domain; ?>/"><img width="30px" src="<?php echo $domain; ?>/img/logo.png"></a>       <div class="screen-header-button close"></div>       <div class="screen-header-button maximize"></div>       <div class="screen-header-button minimize"></div>     </div>     <div class="screen-header-right">       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>       <div class="screen-header-ellipsis"></div>     </div>   </div>   <div class="screen-body">     <div class="screen-body-item left"  style="background-color:white;">  <center>     <h1>
     Error Please Try Again  OR Contact Me              
     </h1>     <br>
-    <h3>          Email : <a href="mailto:contactvkr@yahoo.com">contactvkr@yahoo.com</a>     <br>     <a href="/"> Back to Home 🏠 </a>
+    <h3>          Email : <a href="mailto:contactvkr@yahoo.com">contactvkr@yahoo.com</a>     <br>     <a href="<?php echo $domain; ?>/"> Back to Home 🏠 </a>
     </h3> <br>
 <div id="google_translate_element"></div>
     <script type="text/javascript">   function googleTranslateElementInit() {   new google.translate.TranslateElement({pageLanguage: 'en'},'google_translate_element' ); }  

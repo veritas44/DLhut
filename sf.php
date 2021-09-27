@@ -3,45 +3,45 @@ error_reporting(0);
 $urlx = $_SERVER['REQUEST_URI'];
 $video_id = explode("sdl=", $urlx);
 $video_id = $video_id[1];
-
+include("config.php");
 $lloc = urldecode($video_id);
 $llocf = urlencode($video_id);
 preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|shorts|user)\/))([^\?&\"'>]+)/", $lloc, $match);
 preg_match("~/pin/(?:t\.\d+/)?(\d+)~i", $lloc, $matches);
 $id = $matches[1];
 if(!empty($match[1])){
-   header("Location: /dl/yt.php/?sdl=https://www.youtube.com/watch?v=$match[1]"); 
+   header("Location: $domain/dl/yt.php/?sdl=https://www.youtube.com/watch?v=$match[1]"); 
 }
 elseif(stripos($lloc,'pinterest')==true)  {
-    header("Location: /dl/?sdl=https://pinterest.com/pin/$id");
+    header("Location: $domain/dl/?sdl=https://pinterest.com/pin/$id");
 }
 elseif(stripos($lloc,'gs@')==true)  {
-    header("Location: /dl/igs.php/?sdl=$lloc");
+    header("Location: $domain/dl/igs.php/?sdl=$lloc");
 exit();
   }  
     elseif(stripos($lloc,'gh@')==true)  {
-    header("Location: /dl/igh.php/?sdl=$lloc");
+    header("Location: $domain/dl/igh.php/?sdl=$lloc");
 exit();
   } 
  elseif(stripos($lloc,'tm@')==true)  {
-    header("Location: /dl/ytm.php/?sdl=$lloc");
+    header("Location: $domain/dl/ytm.php/?sdl=$lloc");
 exit();
   }
 elseif(stripos($lloc,'tiktok')==true)  {
-    header("Location: /dl/tiktok.php/?sdl=$lloc");
+    header("Location: $domain/dl/tiktok.php/?sdl=$lloc");
 }
 elseif(stripos($lloc,'/reel/')==true)  {
-    header("Location: /dl/?sdl=$lloc");
+    header("Location: $domain/dl/?sdl=$lloc");
 }
 elseif(stripos($lloc,'insta')==true)  {
-    header("Location: /dl/insta.php/?sdl=$lloc");
+    header("Location: $domain/dl/insta.php/?sdl=$lloc");
 }
 elseif(stripos($lloc,'//')==true)  {
-    header("Location: /dl/?sdl=$lloc");
+    header("Location: $domain/dl/?sdl=$lloc");
 exit();
   }  
    else
-    header("Location: /dl/search.php/?sdl=$lloc");
+    header("Location: $domain/dl/search.php/?sdl=$lloc");
 
 
   //error_reporting(0);
