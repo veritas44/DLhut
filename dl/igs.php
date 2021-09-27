@@ -7,6 +7,8 @@ error_reporting(0);
 $urlx = $_SERVER['REQUEST_URI'];
 $video_id = explode("sdl=", $urlx);
 $video_id = $video_id[1];
+$video_idk = explode("gs@", $urlx);
+$video_idk = $video_idk[1];
 $lloc = urldecode($video_id);
 $llocf = urlencode($video_id);
 preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|shorts|user)\/))([^\?&\"'>]+)/", $lloc, $matches);
@@ -729,9 +731,8 @@ if(!empty($typezf)){
 }
 else echo '';    
 ?> 
-<br><a href="/dl/igh.php/?sdl=//igh:<?php echo $lloc; ?>">
-<button style="width:100%;"  class="btn btn-success"> Download Highlights </button></a><br>
-
+<br><a href="/dl/igh.php/?sdl=igh@<?php echo $video_idk; ?>">
+<button style="width:100%;"  class="btn btn-success"> Download <?php echo $video_idk; ?> Highlights </button></a><br>
 
 </h2><!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 <br>
