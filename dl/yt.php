@@ -151,7 +151,7 @@ Download : <?php echo $title; ?> <?php echo $error; ?>
 <br>
 <video poster="<?php echo $thumbux; ?>" width="100%" height="340" controls>
  <source src="https://dlhut.000webhostapp.com/stream.php?sdl=https://youtube.com/watch?v=<?php echo $matches[1]; ?>" type="video/mp4">
- <source src="https://av4dl2.heroouapp.com/download?url=https://youtube.com/watch?v=<?php echo $lloc; ?>" type="video/mp4">
+ <source src="https://av4dl2.herokuapp.com/download?url=https://youtube.com/watch?v=<?php echo $lloc; ?>" type="video/mp4">
  <source src="https://alltubedownload.net/download?url=https://youtube.com/watch?v=<?php echo $lloc; ?>" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
