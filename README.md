@@ -4,6 +4,25 @@ PHP Search and Download any Videos from any site.
 
 # Online All in One Video & Audio Downloader From YouTube,Facebook,Twitter,Pinterest,Instagram,MXtakatak,IPL, Tiktok and 1000+ More Sites too
 
+# How To Install 
+
+Step 1 - Download All Files ...
+
+Step 2 - Edit config.php file and update domain URL
+
+Step 3 - Upload all file on your server / hosting ..
+
+Step 4 - it work on all hosting >=php5 even on Free Hosting too..
+
+Step 5 - Thats it !
+
+Open Your Site And it start Working ....
+
+# Support
+
+I Regularly Update and fix all error..
+
+Paypal - <a href="https://paypal.me/theofficialvkr"> @theofficialvkr </a>
 
 # How to Download 
     
@@ -41,17 +60,6 @@ Pinterest Supported
  
 Add Google Translate
 
-# How To Install 
-
-Step 1 - Download Files ...
-
-Step 2 - Upload all file on your server / hosting file manager ..
-
-Step 3 - it work on all hosting >php5 so don't care about requirement ...
-
-Step 4 - Thats it !
-
-Open Your Site And it start Working ....
 
 
 # For Any kind of Help 
