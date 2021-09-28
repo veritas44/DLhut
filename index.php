@@ -79,7 +79,7 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
   }
 </style>
 </head>
-<body class="bg-light">
+<body style="word-break: break-all;" class="bg-light">
 <div class="text-center p-5">
 <a href="<?php echo $domain; ?>/">  <img alt="DLhut" src="<?php echo $domain; ?>/img/logo.png" width="240px" height="95px"></a>
 </div>
