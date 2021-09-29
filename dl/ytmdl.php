@@ -174,13 +174,13 @@ else echo '';
 
  if(!empty($matches[1])){
     echo '<br> Download Audio in Webm
-<iframe style="width:96%; height:55px; border:0px;" scrolling="no" src="https://dlhut.000webhostapp.com/api/aio/btn.php/?f=webm&sdl=https://youtu.be/'.$matches[1].'">
+<iframe style="width:96%; height:55px; border:0px;" scrolling="no" src="https://dlhut.000webhostapp.com/dl/btn.php/?f=webm&sdl=https://youtu.be/'.$matches[1].'">
 </iframe><br>';
 }
 else echo ''; 
  if(!empty($matches[1])){
     echo '<br> Download Audio in Wav
-<iframe style="width:96%; height:55px; border:0px;" scrolling="no" src="https://dlhut.000webhostapp.com/api/aio/btn.php/?f=wav&sdl=https://youtu.be/'.$matches[1].'">
+<iframe style="width:96%; height:55px; border:0px;" scrolling="no" src="https://dlhut.000webhostapp.com/dl/btn.php/?f=wav&sdl=https://youtu.be/'.$matches[1].'">
 </iframe><br>';
 }
 else echo ''; 
