@@ -21,7 +21,8 @@ Open Your Site And it start Working ....
 # Support
 
 I Regularly Update and fix all error..
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="theofficialvkr" data-color="#BD5FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+
+<a href="https://www.buymeacoffee.com/theofficialvkr"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=theofficialvkr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
 Paypal - <a href="https://paypal.me/theofficialvkr"> @theofficialvkr </a>
 
 # How to Download 
