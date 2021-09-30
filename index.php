@@ -106,11 +106,7 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
     5. Apart from all this just put link in search box to Download normally.
    
    
-   
     <!-- ShareThis BEGIN --><div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END --><br>
-    
-    
-    
     
     
 <div class="ftco-section center">
@@ -177,7 +173,8 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
 </ul>
 </div>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-<br>
+<br> <a href="https://www.buymeacoffee.com/theofficialvkr" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 <div id="google_translate_element"></div>
     <script type="text/javascript">   function googleTranslateElementInit() {   new google.translate.TranslateElement({pageLanguage: 'en'},'google_translate_element' ); }  
 </script> <script type="text/javascript" src= 
