@@ -733,7 +733,7 @@ if(!empty($typezf)){
 else echo '';    
 ?> 
 <br><a href="<?php echo $domain; ?>/dl/igh.php/?sdl=igh@<?php echo $video_idk; ?>">
-<button style="width:100%;"  class="btn btn-success"> Download <?php echo $video_idk; ?> Highlights </button></a><br>
+<button style="width:100%; background:red;"  class="btn btn-success"> Download <?php echo $video_idk; ?> Highlights </button></a><br>
 
 </h2><!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 <br>

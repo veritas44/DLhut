@@ -723,7 +723,7 @@ if(!empty($typezf)){
 else echo '';    
 ?>    
 <br><a href="<?php echo $domain; ?>/dl/aio.php/?sdl=<?php echo $lloc; ?>">
-<button style="width:100%;"  class="btn btn-success"> More Format </button></a><br>
+<button style="width:100%; background:red;"  class="btn btn-success"> More Format </button></a><br>
 </h2><!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 <br>
 <div id="google_translate_element"></div>

@@ -209,7 +209,7 @@ Total Videos : <?php echo $tvideo; ?>
 
    
 <br><a href="<?php echo $domain; ?>/dl/?sdl=<?php echo $lloc; ?>">
-<button style="width:100%;"  class="btn btn-success"> More Format </button></a><br>
+<button style="width:100%; background:red;"  class="btn btn-success"> More Format </button></a><br>
 
 </h2>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->

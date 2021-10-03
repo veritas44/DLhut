@@ -734,7 +734,7 @@ if(!empty($typezf)){
 else echo '';    
 ?>    
 <br><a href="<?php echo $domain; ?>/dl/aio.php/?sdl=<?php echo $lloc; ?>">
-<button style="width:100%;"  class="btn btn-success"> More Format </button></a><br>
+<button style="width:100%; background:red;"  class="btn btn-success"> More Format </button></a><br>
 </h2><h1> How to Download </h1> <br>
     1. To Download Instagram story search Like this - igs@USERNAME
     <br>

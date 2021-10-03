@@ -21,8 +21,8 @@ Open Your Site And it start Working ....
 # Support
 
 I Regularly Update and fix all error..
-
-<a href="https://www.buymeacoffee.com/theofficialvkr"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=theofficialvkr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
+<br>
+<a href="https://www.buymeacoffee.com/theofficialvkr"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=theofficialvkr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"><br></a>
 Paypal - <a href="https://paypal.me/theofficialvkr"> @theofficialvkr </a>
 
 # How to Download 
@@ -65,7 +65,7 @@ Add Google Translate
 
 # For Any kind of Help 
 
-Demo : http://dlhut.ml
+Demo : http://dlhut.ml OR https://dlhut.herokuapp.com
 
 Contact me On Mail      : contactvkr@yahoo.com  
 Or On Social media 
@@ -74,5 +74,7 @@ Or On Social media
 Instagram </a>
 
 <a href="https://twitter.com/theofficialvkr"> 
-Twitter </a><a href="https://facebook.com/theofficialvkr"> 
+Twitter </a>
+
+<a href="https://facebook.com/theofficialvkr"> 
 Facebook </a>
