@@ -369,17 +369,6 @@ if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/inc/servi
     
     
 <center>
-    <h1> How to Download </h1> <br>
-    1. To Download Instagram story search Like this - igs@USERNAME
-    <br>
-    2. To Download Instagram Highlights search Like this - igh@USERNAME 
-    <br>
-    3. To Download YouTube music search Like this - ytm@Music Name
-    <br>
-    4. To search Youtube video normally put video name in search box .   
-    <br>
-    5. Apart from all this just put link in search box to Download normally.
-   
 
         <!-- ShareThis BEGIN --><div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END --><br>
 <h2 style="word-break: break-all;">    
@@ -724,7 +713,17 @@ else echo '';
 ?>    
 <br><a href="<?php echo $domain; ?>/dl/aio.php/?sdl=<?php echo $lloc; ?>">
 <button style="width:100%; background:red;"  class="btn btn-success"> More Format </button></a><br>
-</h2><!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+</h2> <h1> How to Download </h1> <br>
+    1. To Download Instagram story search Like this - igs@USERNAME
+    <br>
+    2. To Download Instagram Highlights search Like this - igh@USERNAME 
+    <br>
+    3. To Download YouTube music search Like this - ytm@Music Name
+    <br>
+    4. To search Youtube video normally put video name in search box .   
+    <br>
+    5. Apart from all this just put link in search box to Download normally.
+   <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 <br>
 <div id="google_translate_element"></div>
     <script type="text/javascript">   function googleTranslateElementInit() {   new google.translate.TranslateElement({pageLanguage: 'en'},'google_translate_element' ); }  
